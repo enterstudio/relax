@@ -15,7 +15,9 @@
     "watchServer": "nodemon -e js,jsx,json -w app.js -w lib -i lib/client -x \"webpack --config ./webpack/dev/webpack.node.config.js && yarn startDev\"",
     "webpackServer": "webpack-dev-server --config ./webpack/dev/webpack.browser.config.js --inline --hot --quiet --display-error-details",
     "eslint": "eslint ./lib --ext .js --ext .jsx",
-    "test": "jest"
+    "test": "jest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "babel-plugin-lodash": "^3.2.9",
@@ -75,11 +77,12 @@
     "semver": "^5.0.3",
     "serialize-javascript": "^1.1.2",
     "shallowequal": "^0.2.2",
-    "sharp": "^0.16.1",
+    "sharp": "^0.16.2",
     "slug": "^0.9.1",
-    "superagent": "^1.6.1",
+    "superagent": "^2.0.0",
     "warning": "^2.1.0",
-    "winston": "^2.1.0"
+    "winston": "^2.1.0",
+    "snyk": "^1.120.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
@@ -156,5 +159,6 @@
     "collectCoverageFrom": [
       "lib/**/reducers/**/*.js"
     ]
-  }
+  },
+  "snyk": true
 }
