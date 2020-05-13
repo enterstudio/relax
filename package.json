@@ -39,7 +39,7 @@
     "hoist-non-react-statics": "^1.2.0",
     "invariant": "^2.2.0",
     "js-md5": "^0.3.0",
-    "kerberos": "^0.0.21",
+    "kerberos": "^1.0.0",
     "keymaster": "git+https://github.com/relax/keymaster.git",
     "lodash": "^4.16.6",
     "medium-editor": "git+https://github.com/relax/medium-editor.git",
