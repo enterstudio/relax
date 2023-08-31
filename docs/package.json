@@ -7,10 +7,12 @@
   },
   "scripts": {
     "dev": "parallelshell \"hexo generate -w\" \"hexo server\"",
-    "deploy": "hexo generate -d"
+    "deploy": "hexo generate -d",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
-    "hexo": "^3.2.0",
+    "hexo": "^3.7.0",
     "hexo-browsersync": "^0.2.0",
     "hexo-deployer-git": "^0.2.0",
     "hexo-generator-archive": "^0.1.4",
@@ -22,6 +24,8 @@
     "hexo-renderer-sass": "^0.2.0",
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0",
-    "parallelshell": "^2.0.0"
-  }
+    "parallelshell": "^2.0.0",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
